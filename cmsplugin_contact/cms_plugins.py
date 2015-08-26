@@ -5,7 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.forms.fields import CharField
 from django import forms
 from django.core.mail import EmailMessage
-from django.template.loader import render_to_string, find_template, TemplateDoesNotExist
+from django.template.loader import render_to_string, select_template
 from django.http import HttpResponseRedirect
 
 from cms.plugin_base import CMSPluginBase
@@ -182,18 +182,15 @@ class ContactPlugin(CMSPluginBase):
         return context
 
     def render_change_form(self, request, context, add=False, change=False, form_url='', obj=None):
-        template = "admin/cms/page/plugin/change_form.html"  # django-cms 3.0
-        try:
-            find_template(template)
-        except TemplateDoesNotExist:
-            # django-cms < 3.0
-            template = "admin/cms/page/plugin_change_form.html"
-
+        template = select_template([
+            "admin/cms/page/plugin_change_form.html",
+            "admin/cms/page/plugin/change_form.html",  # django-cms 3.0
+        ])
         context.update({
             'spam_protection_method': obj.spam_protection_method if obj else 0,
             'recaptcha_settings': hasattr(settings, "RECAPTCHA_PUBLIC_KEY"),
             'akismet_settings': hasattr(settings, "AKISMET_API_KEY"),
-            'parent_template': template
+            'parent_template': template,
         })
 
         return super(ContactPlugin, self).render_change_form(request, context, add, change, form_url, obj)

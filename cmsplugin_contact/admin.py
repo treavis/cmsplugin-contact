@@ -1,5 +1,9 @@
 from django.forms import ModelForm, Field, CharField, HiddenInput
-from django.forms.util import ErrorList
+try:
+    #Django 1.8
+    from django.forms.utils import ErrorList
+except ImportError:
+    from django.forms.util import ErrorList
 from django.core.exceptions import ValidationError
 from django.contrib.sites.models import Site
 from django.conf import settings
@@ -14,12 +18,12 @@ class KeyField(CharField):
 
 class ContactAdminForm(ModelForm):
     akismet_api_key = KeyField(max_length=255, label=_("Akismet API Key"), help_text=_('Get a Wordpress Key from http://akismet.com/'))
-
     recaptcha_public_key = KeyField(max_length=255, label=_("ReCAPTCHA Public Key"), help_text=_('Get this from http://www.google.com/recaptcha'))
     recaptcha_private_key = KeyField(max_length=255, label=_("ReCAPTCHA Private Key"), help_text=_('Get this from http://www.google.com/recaptcha'))
     
     class Meta:
         model = Contact
+        exclude = []
         
     def _add_error(self, field_name, error):
         if not field_name in self._errors:
