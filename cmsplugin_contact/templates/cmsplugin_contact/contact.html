@@ -1,5 +1,9 @@
 {% load i18n sekizai_tags staticfiles %}
 
+{% addtoblock "css" %}
+    <link href="{% static "css/cmsplugin_contact.css" %}" rel="stylesheet" type="text/css">
+{% endaddtoblock %}
+
 <form action="{{ submit_url }}" method="post" role="form" novalidate id="cmsplugin-contact-form">
     <div class="form-overlay"><!--form overlay--></div>
     <div class="form-group">
