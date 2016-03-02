@@ -18,9 +18,9 @@ class BootstrapWidget(forms.Widget):
 class ContactForm(forms.Form):
     email = forms.EmailField(label=_("Email"), required=True, widget=BootstrapWidget(forms.EmailInput, 'email', attrs={'autocomplete':'off'}))
     phone = forms.CharField(label=_("Phone"), required=True, widget=BootstrapWidget(forms.TextInput, 'phone', attrs={'autocomplete':'off'}))
-    country = forms.CharField(label=_("Country"), required=True, widget=BootstrapWidget(forms.TextInput, 'country', attrs={'autocomplete':'off'}))
-    devices = forms.CharField(label=_("Decvice count"), required=True, widget=BootstrapWidget(forms.TextInput, 'devices', attrs={'autocomplete':'off'}))
-    content = forms.CharField(label=_("Message"), required=False, widget=BootstrapWidget(forms.Textarea, 'textarea'))
+    country = forms.CharField(label=_("Country"), required=False, widget=BootstrapWidget(forms.TextInput, 'country', attrs={'autocomplete':'off'}))
+    devices = forms.CharField(label=_("Decvice count"), required=False, widget=BootstrapWidget(forms.TextInput, 'devices', attrs={'autocomplete':'off'}))
+    content = forms.CharField(label=_("Message"), required=True, widget=BootstrapWidget(forms.Textarea, 'textarea'))
 
     template = "cmsplugin_contact/contact.html"
   
