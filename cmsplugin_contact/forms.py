@@ -17,6 +17,7 @@ class BootstrapWidget(forms.Widget):
   
 class ContactForm(forms.Form):
     email = forms.EmailField(label=_("Email"), required=True, widget=BootstrapWidget(forms.EmailInput, 'email', attrs={'autocomplete':'off'}))
+    subject = forms.CharField(label=_("Subject"), required=False, widget=BootstrapWidget(forms.TextInput, 'subject', attrs={'autocomplete':'off'}))
     content = forms.CharField(label=_("Message"), required=True, widget=BootstrapWidget(forms.Textarea, 'textarea'))
 
     template = "cmsplugin_contact/contact.html"
