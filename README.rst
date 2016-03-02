@@ -1,6 +1,6 @@
-==============================
-Django CMS Contact Form Plugin
-==============================
+=========================================
+Django CMS Contact Form Plugin using Ajax
+=========================================
 
 Contact form plugin for `Django CMS <http://www.django-cms.org/>`_ with spam protection and i18n.
 
@@ -28,22 +28,22 @@ All libraries can be installed by ``pip`` or ``easy_install``.
 
 It is recommended but not required to use South. Again it can be easily installed by ``pip`` or ``easy_install``.
 
+Fonts
+-----------
+
+While making a request, form overlay is displayed which uses FontAwesome. https://fortawesome.github.io/Font-Awesome/ or https://pypi.python.org/pypi/djangocms-glyphicon-awesome/0.1.0
+
 Installation
 ============
 
 Download
 --------
 
-From PyPI
-'''''''''
-
-You can simply type into a terminal ``pip install cmsplugin-contact`` or ``easy_install cmsplugin-contact``.
-
 Manually
 ''''''''
 
 You can download a zip archive of the `latest development version 
-<https://github.com/maccesch/cmsplugin-contact/archive/master.zip>`_ from GitHub. 
+<https://github.com/treavis/cmsplugin-contact/archive/master.zip>`_ from GitHub. 
 Unzip the file you downloaded. Then go in your terminal and ``cd`` into the unpacked folder. Then type ``python setup.py install`` in your terminal.
 
 Setup
@@ -52,6 +52,8 @@ Setup
 Put ``'cmsplugin_contact'`` in your ``INSTALLED_APPS`` section in settings.py. Don't forget to syncdb your database or migrate if you're using South.
 
 Put ``'cmsplugin_contact.middleware.ForceResponseMiddleware'`` in your ``MIDDLEWARE_CLASSES`` section in settings.py.
+
+Set aplication to 'contact' for the page which will use contact form (in advanced page settings).
 
 
 Settings
