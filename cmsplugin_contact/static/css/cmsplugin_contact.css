@@ -12,6 +12,16 @@
     display: none;
 }
 
+#cmsplugin-contact-form div.form-overlay i {
+    font-size: 2em;
+    display: block;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%, 0);
+}
+
 #confirmation-message {
     display: none;
 }
