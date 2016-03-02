@@ -7,13 +7,10 @@
             evt.preventDefault();
 
             function handleResponse(data){
-                console.log(data);
                 if (data.ok) { // Success!
                     $('#confirmation-message').fadeIn();
                     $form.hide();
-                }
-            
-                else {
+                } else {
                     //If recaptcha ( needs fixing! )
                     //Recaptcha.reload();
                     $('span.error_msg').remove();
