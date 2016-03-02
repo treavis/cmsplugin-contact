@@ -1,8 +1,5 @@
 {% load i18n %}
 
 {% trans "Message from" %}: {{ data.email }}
-{% trans "Phone" %}: {{ data.phone }}
-{% trans "Country" %}: {{ data.country }}
-{% trans "Device count" %}: {{ data.devices }}
 
 {% trans "Message" %}: {{ data.content|safe }}
