@@ -1,0 +1,210 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-26 16:30+0200\n"
+"PO-Revision-Date: 2016-01-20 21:55+0141\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Translated-Using: django-rosetta 0.7.8\n"
+
+#: cmsplugin_contact/admin.py:16
+msgid "Akismet API Key"
+msgstr "Akismet API Raktas"
+
+#: cmsplugin_contact/admin.py:16
+msgid "Get a Wordpress Key from http://akismet.com/"
+msgstr "Gauti Wordpress Rakta iš http://akismet.com/"
+
+#: cmsplugin_contact/admin.py:18
+msgid "ReCAPTCHA Public Key"
+msgstr "ReCAPTCHA Viešas Raktas"
+
+#: cmsplugin_contact/admin.py:18 cmsplugin_contact/admin.py:19
+msgid "Get this from http://www.google.com/recaptcha"
+msgstr "Tai gauti iš http://www.google.com/recaptcha"
+
+#: cmsplugin_contact/admin.py:19
+msgid "ReCAPTCHA Private Key"
+msgstr "ReCAPTCHA Privatus Raktas"
+
+#: cmsplugin_contact/admin.py:36
+msgid ""
+"Akismet library is not installed. Use \"easy_install akismet\" or \"pip "
+"install akismet\"."
+msgstr ""
+
+#: cmsplugin_contact/admin.py:50
+msgid "The API Key is not valid."
+msgstr "\"API Raktas neteisingas"
+
+#: cmsplugin_contact/admin.py:58
+msgid ""
+"ReCAPTCHA library is not installed. Use \"easy_install recaptcha-client\" or "
+"\"pip install recaptcha-client\"."
+msgstr ""
+
+#: cmsplugin_contact/cms_plugins.py:30
+#: cmsplugin_contact/templates/cmsplugin_contact/subject.txt:1
+msgid "Contact Form"
+msgstr "Kontaktų Forma"
+
+#: cmsplugin_contact/cms_plugins.py:43
+msgid "Redirection"
+msgstr "Nukreipimas"
+
+#: cmsplugin_contact/cms_plugins.py:46
+msgid "Spam Protection"
+msgstr "Šlamšto Apsauga"
+
+#: cmsplugin_contact/forms.py:19
+msgid "Email"
+msgstr "Paštas"
+
+#: cmsplugin_contact/forms.py:20
+msgid "Phone"
+msgstr "Telefonas"
+
+#: cmsplugin_contact/forms.py:21
+msgid "Date / time"
+msgstr "Data / laikas"
+
+#: cmsplugin_contact/forms.py:22
+msgid "Additional info"
+msgstr "Papildoma informacija"
+
+#: cmsplugin_contact/models.py:24
+msgid "Form name"
+msgstr "Formos pavadinimas"
+
+#: cmsplugin_contact/models.py:27
+msgid "Used to distinguish multiple contact forms on the same site."
+msgstr "Naudojama atskirti skirtingas kontaktų formas viename puslapyje"
+
+#: cmsplugin_contact/models.py:28
+msgid "Form Layout"
+msgstr "Formos Išdėstymas"
+
+#: cmsplugin_contact/models.py:30
+msgid "Choice the layout of contact form"
+msgstr "Pasirinkite kontaktų formos išdėstymą"
+
+#: cmsplugin_contact/models.py:33
+msgid "Email recipient"
+msgstr "Pašto gavėjas"
+
+#: cmsplugin_contact/models.py:36
+msgid "Thanks message"
+msgstr "Padėkos žinutė"
+
+#: cmsplugin_contact/models.py:37
+msgid "Message displayed on successful submit"
+msgstr "Žinutė rodoma sėkmingai nusiuntus formą"
+
+#: cmsplugin_contact/models.py:38
+msgid "Thank you for your message."
+msgstr "Dėkojame už jūsų žinutę"
+
+#: cmsplugin_contact/models.py:39
+msgid "Submit button value"
+msgstr "Patvirtinimo mygtuko tekstas"
+
+#: cmsplugin_contact/models.py:40
+msgid "Submit"
+msgstr "Patvirtinti"
+
+#: cmsplugin_contact/models.py:43
+msgid "Spam protection method"
+msgstr "Šlamšto apsaugos metodas"
+
+#: cmsplugin_contact/models.py:53
+msgid "ReCAPTCHA theme"
+msgstr "ReCAPTCHA tema"
+
+#: cmsplugin_contact/models.py:55
+msgid "URL Redirection"
+msgstr "URL peradresavimas"
+
+#: cmsplugin_contact/models.py:55
+msgid "If it is set, the form redirect to url when the form is valid"
+msgstr "Jei pažymėta, forma nukreips į suvestą adresą"
+
+#: cmsplugin_contact/nospam/fields.py:13
+msgid "Please don't check this box."
+msgstr "Šio langelio nežymėti"
+
+#: cmsplugin_contact/nospam/forms.py:42
+msgid "Please enter the two words on the image separated by a space:"
+msgstr "Įveskite du žodžius matomus paveikslėlyje, atskirtus tarpu:"
+
+#: cmsplugin_contact/nospam/forms.py:44
+msgid "You did not enter any of the words."
+msgstr "Jūs neįvedėte jokių žodžių."
+
+#: cmsplugin_contact/nospam/forms.py:82
+msgid "An unexpected Error occurred, please try again."
+msgstr "Įvyko nenumatyta klaida, bandykite dar kartą."
+
+#: cmsplugin_contact/nospam/forms.py:84
+msgid "Please enter the two words shown in the image."
+msgstr "Įveskite du žodžius matomus paveikslėlyje."
+
+#: cmsplugin_contact/nospam/forms.py:92
+msgid "The words you entered did not match the image. Please try again."
+msgstr "Jūsų įvesti žodžiai neatitiko paveikslėlio. Bandykite dar kartą."
+
+#: cmsplugin_contact/nospam/widgets.py:30
+msgid "Are you a robot?"
+msgstr "Ar jūs esate robotas?"
+
+#: cmsplugin_contact/settings.py:7
+msgid "default"
+msgstr "numatytasis"
+
+#: cmsplugin_contact/templates/cmsplugin_contact/contact.html:31
+msgid "Incorrect please try again"
+msgstr "Neteisinga, prašome bandyti dar kartą"
+
+#: cmsplugin_contact/templates/cmsplugin_contact/contact.html:35
+msgid "Enter the words above:"
+msgstr "Iveskite žodžius:"
+
+#: cmsplugin_contact/templates/cmsplugin_contact/contact.html:36
+msgid "Enter the numbers you hear:"
+msgstr "Įveskite skaičius kuriuos girdite:"
+
+#: cmsplugin_contact/templates/cmsplugin_contact/contact.html:49
+msgid "Get another CAPTCHA"
+msgstr "Gauti kitą CAPTCHA"
+
+#: cmsplugin_contact/templates/cmsplugin_contact/contact.html:50
+msgid "Get an audio CAPTCHA"
+msgstr "Gauti garsinę CAPTCHA"
+
+#: cmsplugin_contact/templates/cmsplugin_contact/contact.html:51
+msgid "Get an image CAPTCHA"
+msgstr "Gauti vaizdinę CAPTCHA"
+
+#: cmsplugin_contact/templates/cmsplugin_contact/contact.html:52
+msgid "Help"
+msgstr "Pagalba"
+
+#: cmsplugin_contact/templates/cmsplugin_contact/email.txt:2
+msgid "Message from"
+msgstr "Žinutė nuo"
+
+#: cmsplugin_contact/templates/cmsplugin_contact/email.txt:3
+msgid "Reservation time"
+msgstr "Rezervacijos laikas"
