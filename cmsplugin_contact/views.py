@@ -82,11 +82,11 @@ class ContactFormAjaxView(AjaxableResponseMixin, FormView):
         return self._plugin_inst
     plugin_inst = property(plugin_inst)
 
-    def get_form_class(self):
-        return self.plugin.get_contact_form_class(self.plugin_inst)
+    #def get_form_class(self):
+    #    return self.plugin.get_contact_form_class(self.plugin_inst)
 
     def get_form(self, form_class):
-        return self.plugin.get_contact_form(form_class, self.plugin_inst, self.request)
+        return self.plugin.create_form(self.plugin_inst, self.request)
 
     #
     # NOTE: Even though this will never be used, the FormView requires that
