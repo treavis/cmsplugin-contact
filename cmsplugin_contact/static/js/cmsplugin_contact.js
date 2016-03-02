@@ -11,8 +11,9 @@
                     $('#confirmation-message').fadeIn();
                     $form.hide();
                 } else {
-                    //If recaptcha ( needs fixing! )
-                    //Recaptcha.reload();
+                    if (typeof Recaptcha != "undefined") {
+                        Recaptcha.reload();
+                    }
                     $('span.error_msg').remove();
                     $.each(data, function(key, value){
                        $('div.input-group.' + key).append('<span class="error_msg">' + value + '</span>');
