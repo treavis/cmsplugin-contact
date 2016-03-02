@@ -1,6 +1,7 @@
 import os
 from django import dispatch
 from django.conf import settings
+from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
 from django.forms.fields import CharField
 from django import forms
@@ -165,19 +166,20 @@ class ContactPlugin(CMSPluginBase):
             request.method = "GET"
         form = self.create_form(instance, request)
         instance.render_template = getattr(form, 'template', self.render_template)
-        if request.method == "POST" and form.is_valid():
-            self.send(form, instance.form_name, instance.site_email, attachments=request.FILES)
-            
-            if instance.redirect_url:
-                setattr(request, 'django_cms_contact_redirect_to', HttpResponseRedirect(instance.redirect_url)) 
-            context.update({
-                'contact': instance,
-            })        
-        else:
-            context.update({
-                'contact': instance,
-                'form': form,
-            })
+        #if request.method == "POST" and form.is_valid():
+        #    self.send(form, instance.form_name, instance.site_email, attachments=request.FILES)
+        #    
+        #    if instance.redirect_url:
+        #        setattr(request, 'django_cms_contact_redirect_to', HttpResponseRedirect(instance.redirect_url)) 
+        #    context.update({
+        #        'contact': instance,
+        #    })        
+        #else:
+        context.update({
+            'contact': instance,
+            'form': form,
+            'submit_url': reverse('multi_form'),
+        })
 
         return context
 
