@@ -45,6 +45,7 @@ Manually
 You can download a zip archive of the `latest development version 
 <https://github.com/treavis/cmsplugin-contact/archive/master.zip>`_ from GitHub. 
 Unzip the file you downloaded. Then go in your terminal and ``cd`` into the unpacked folder. Then type ``python setup.py install`` in your terminal.
+Or use ``pip install -e git+https://github.com/treavis/cmsplugin-contact.git#egg=cmsplugin-contact``.
 
 Setup
 -----
@@ -111,6 +112,28 @@ In your custom form, you can set what template you want to use, like this::
     class MyContactForm(Form):
         ...
         template = 'path/to/my_contact_template.html'
+
+If you want to use your own form fields, add form setting without default ContactForm::
+
+    (
+        ('my_app.forms.MyContactForm', _('My form')),
+    )
+    
+In your custom form make your fields and set a template::
+
+    from django import forms
+    from django.utils.translation import ugettext_lazy as _
+    from cmsplugin_contact.forms import ContactForm, BootstrapWidget
+    
+    class MyContactForm(forms.Form):
+        email = forms.EmailField(label=_("Email"), required=True, widget=BootstrapWidget(forms.EmailInput, 'email', attrs={'autocomplete':'off'}))
+        subject = forms.CharField(label=_("Subject"), required=True, widget=BootstrapWidget(forms.TextInput, 'subject', attrs={'autocomplete':'off'}))
+        content = forms.CharField(label=_("Message"), required=True, widget=BootstrapWidget(forms.Textarea, 'textarea'))
+        
+        template = 'path/to/my_contact_template.html'
+        
+Don't forget to change form layout when saving cms plugin in page.
+
 
 Editors
 =======
