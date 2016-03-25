@@ -119,7 +119,7 @@ class ContactPlugin(CMSPluginBase):
         if request.method == "POST":
             form = FormClass(request, data=request.POST, files=request.FILES)
         else:
-            form = FormClass(request)
+            form = FormClass(request, initial=request.GET)
         form.fields['my_name'] = forms.CharField(max_length=len(instance.form_name),
                                                  widget=forms.HiddenInput,
                                                  label='',
